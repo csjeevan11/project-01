@@ -1,0 +1,20 @@
+apiVersin: apps/v1
+kind: Deployment
+metadata:
+  name: springboot-app
+
+spec:
+  replicas: 2
+  selector:
+    matchlabels:
+      app: springboot-app
+  template:
+    metadata:
+      labels:
+        app: springboot-app
+  spec:
+    containers:
+    - name: springboot-app
+      image: jeevan11cs/java-app:v1
+      ports:
+      - containerPort: 8080
