@@ -4,12 +4,12 @@ source = "terraform-aws-modules/eks/aws"
 version = "~> 20.0"
 
 cluster_name = var.cluster_name
-cluster_versoin = "1.33"
+cluster_version = "1.33"
 
 subnet_ids = var.subnet_ids
 enable_cluster_creator_admin_permissions = true
 vpc_id = var.vpc_id
-eks_managed_node_group = {
+eks_managed_node_groups = {
 eks_nodes ={
     desired_size = 2
     max_size = 3
